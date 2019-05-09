@@ -1,0 +1,63 @@
+.general-statistics{
+    @include container-box;
+    @include respond-to('small'){
+       margin: 10px; 
+    }
+    .statistics-form-date{
+        min-height: 130px;
+        @include flex-center;
+        @include border-bottom-main;
+        form{
+            @include flex-center;
+            .InpDate{
+                @include respond-to('small'){
+                    @include flex-center;
+                    flex-direction: column;
+                }
+                input[type="date"]{
+                    margin: 10px 10px 5px 10px;
+                    height: 40px;
+                    min-width: 200px;
+                    padding: 10px;
+                    border: 1px solid $main-color-border;
+                }
+            }  
+        }
+    }
+
+    .statistics-table{
+        min-height: 150px;
+        @include flex-center;
+        margin: 25px auto;
+        tbody{
+            max-width: 300px;
+            margin: 0 40px;
+            tr{
+                @include border-bottom-main;
+                width: 300px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:hover{
+                    @include hover-row;
+                }
+                td:nth-child(odd){
+                    @include paragraph-style;
+                    font-weight: 600;
+                }
+                td:nth-child(even){
+                    @include paragraph-table-number;
+                }
+            }
+        }
+    }
+    .chart {
+        max-width: 1100px;
+        padding: 0 20px;
+        margin: 50px auto;
+        p{
+            @include paragraph-style;
+            font-weight: 600; 
+        }
+    }
+}
