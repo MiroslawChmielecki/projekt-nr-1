@@ -1,1 +1,2 @@
-# projekt-indywidualny-modu-9-12-
+Link to site:
+https://miroslawchmielecki.github.io/projekt-nr-1/
