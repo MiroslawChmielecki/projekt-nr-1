@@ -1,0 +1,139 @@
+.links {
+  @include container-box;
+  @include respond-to("small") {
+    margin: 10px;
+  }
+
+  .links-container {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1170px;
+
+    .links-table {
+      @include flex-center;
+
+      tbody {
+        width: 100%;
+
+        tr {
+          display: flex;
+          justify-content: flex-start;
+          @include border-bottom-main;
+          flex-wrap: wrap;
+          margin: 0 10px;
+          padding: 0 10px;
+          @include respond-to("small") {
+            flex-direction: column;
+            padding: 20px;
+          }
+          @include respond-to("extra-small") {
+            padding: 20px 0;
+          }
+          &:hover {
+            @include hover-row;
+            td:nth-child(even) {
+              .links-icons {
+                visibility: visible;
+              }
+            }
+          }
+
+          td {
+            display: flex;
+            align-items: center;
+            @include respond-to("small") {
+              flex-direction: column;
+            }
+          }
+
+          .link-title {
+            @include paragraph-style;
+            font-weight: 600;
+            flex: 4;
+            @include respond-to("medium") {
+              flex: 3;
+            }
+          }
+
+          .banner-title {
+            @include respond-to("medium") {
+              flex: 2;
+            }
+          }
+
+          .link-details {
+            justify-content: space-between;
+            flex: 6;
+            @include respond-to("medium") {
+              flex: 7;
+            }
+
+            a {
+              @include link-name-style;
+              margin: 16px 0;
+            }
+
+            .links-icons {
+              margin: 0 30px;
+              visibility: hidden;
+              @include respond-to("medium") {
+                margin: 0;
+              }
+              @include respond-to("small") {
+                margin: 0 20px;
+              }
+
+              .link-icon {
+                width: 16px;
+                height: 8px;
+                margin-right: 15px;
+              }
+
+              .trash-icon {
+                width: 14px;
+                height: 15px;
+                margin-left: 15px;
+                filter: invert(50%);
+                @include respond-to("large") {
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+
+          .banner-details {
+            @include respond-to("large") {
+              flex: 9;
+            }
+            @include respond-to("medium") {
+              flex: 6;
+              margin-left: 10px;
+            }
+            @include respond-to("small") {
+              flex: 6;
+              margin: 0;
+            }
+
+            a {
+              @include respond-to("medium") {
+                font-size: 16px;
+              }
+            }
+
+            .links-icons {
+              .link-icon {
+                @include respond-to("medium") {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+
+        tr:first-of-type {
+          @include border-top-main;
+        }
+      }
+    }
+  }
+}

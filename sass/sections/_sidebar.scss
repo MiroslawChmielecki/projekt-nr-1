@@ -1,115 +1,153 @@
-.sidebar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background-color: #191919;
-    width: 230px;
-    @include respond-to('small'){
-       position: static;
-       width: 100%; 
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #191919;
+  width: 230px;
+  @include respond-to("small") {
+    position: static;
+    width: 100%;
+  }
+
+  .aside-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    height: 73px;
+    @include respond-to("small") {
+      padding: 0 15%;
     }
-    .aside-logo{
+
+    .logo {
+      width: 86px;
+      height: 23px;
+    }
+
+    button {
+      background: none;
+      border: 0;
+      padding: 0;
+      &:focus {
+        outline: none;
+      }
+
+      .hamburger {
+        &:hover {
+          filter: brightness(1.7);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .aside-menu {
+    height: 100%;
+    @include respond-to("small") {
+      display: none;
+    }
+
+    [class*="side"] {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      @include hover-sidebar;
+      @include respond-to("small") {
+        padding: 0 35%;
+        @include sidebar-border-bottom-line;
+      }
+
+      img {
+        @include icon;
+        filter: invert(70%);
+      }
+
+      p {
+        @include paragraph-style;
+      }
+    }
+
+    .side-manager {
+      flex-direction: column;
+      margin-top: 30px;
+      @include sidebar-border-top-line;
+      @include sidebar-border-bottom-line;
+      @include respond-to("small") {
+        padding: 0;
+        margin: 0;
+        border-top: 0;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      .photo-manager {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 0 35px;
-        height: 73px;
-        @include respond-to('small'){
-            padding: 0 15%;
+        position: relative;
+
+        .photoMan {
+          filter: invert(0);
+          width: 43px;
+          height: 43px;
         }
-        .logo{
-            width: 86px;
-            height: 23px;
+
+        .green-point {
+          position: absolute;
+          top: 10px;
+          left: 43px;
         }
-        button{
-            background: none;
-            border: 0;
-            padding: 0;
-            &:focus{
-                outline: none;
-            }
-            .hamburger{
-                &:hover{
-                    filter : brightness(1.7);
-                }
-            }
+
+        p {
+          @include link-name-style;
+          margin: 0;
         }
+      }
     }
-    .aside-menu{
-        height: 100%;
-        [class*="side"]{
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-            @include respond-to('small'){
-                justify-content: center;
-                @include sidebar-border-bottom-line;
-            }
-            img{
-                @include icon;
-                filter:  invert(70%);
-            }
-            p{
-                @include paragraph-style;
-            }  
+
+    .side-top-navi {
+      display: none;
+
+      @include respond-to("small") {
+        display: initial;
+        padding: 0;
+        flex-direction: column;
+      }
+
+      [class*="nav-"] {
+        @include respond-to("small") {
+          width: 100%;
+          @include flex-center;
+          @include sidebar-border-bottom-line;
+          @include hover-sidebar;
         }
-        .fix{
-            @include hover-sidebar;
-       }
-        .side-manager{
-            flex-direction: column;
-            margin-top: 30px;
-            @include sidebar-border-top-line;
-            @include sidebar-border-bottom-line;
-            @include respond-to('small'){
-                margin: 0;
-                border-top: 0;
-            }
-                p{
-                    margin-bottom: 5px;
-                }
-            .photo-manager{
-                display: flex;
-                align-items: center;
-                position: relative;
-                .photoMan{
-                    filter: invert(0);
-                    width: 43px;
-                    height: 43px;
-                }
-                .green-point{
-                    position: absolute;
-                    top: 10px;
-                    left: 43px;
-                }
-                p{
-                    @include link-name-style;
-                    margin: 0; 
-                }
-            }
+      }
+
+      .nav-two {
+        .bell {
+          position: relative;
+
+          .orange-point {
+            position: absolute;
+            top: 10px;
+            left: 24px;
+          }
         }
-        .side-top-navi{
-            display: none;
-            @include respond-to('small'){
-                padding: 0;
-                flex-direction: column;
-            }
-            [class*="nav-"]{
-                @include respond-to('small'){
-                    width: 100%;
-                    @include flex-center;
-                    @include sidebar-border-bottom-line;
-                    @include hover-sidebar;
-                }
-            }
-            .nav-three{
-                p{
-                    @include respond-to('small'){
-                        @include link-name-style;
-                    }
-                }
-            }
+      }
+
+      .nav-three {
+        p {
+          @include respond-to("small") {
+            @include link-name-style;
+          }
         }
-    } 
+      }
+    }
+  }
+
+  .show {
+    display: inline;
+  }
 }

@@ -1,107 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@import "media-breakpoints";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 @import "variables";
 @import "mixins";
 @import "normalize";
 @import "layout";
 /* Components */
-//@import "components/form_field";
+@import "components/buttons";
+@import "components/points-for-icons";
+@import "components/section-header-style";
+@import "components/links-global";
 
 /* Sections */
 @import "sections/header";
 @import "sections/sidebar";
 @import "sections/general-statistics";
-@import "sections/links";
+@import "sections/links-banners";
 
 /* Pages / Views */
 //@import "pages/registration";
-
-
-
-body {
-    margin: 0 auto;
-}
-
-.orange-point{
-    width: 8px;
-    height: 8px;
-    background-color: #f58220;
-    border-radius: 50%;
-}
-.green-point{
-    width: 11px;
-    height: 11px;
-    background-color: #04ae00;
-    border-radius: 50%;
-}
-.paragraph-header-style{
-    @include paragraph-style;
-    height: 50px;
-    padding: 0 0 0 20px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    @include border-bottom-main;
-    text-transform: uppercase;
-}
-.button-section{
-    margin: 40px 0;
-    width: 127px;
-    height: 40px;
-    border-radius: 3px;
-    background-color: #f58220;
-    border: none;
-    &:hover{
-        background-color: #56819f;
-    }
-    span{
-        color: #ffffff;
-        font-family: Roboto;
-        font-size: 18px;
-        font-weight: 300;
-    }
-}
-.button-form{
-    
-        margin: 5px;
-        width: 41px;
-        height: 40px;
-        border-radius: 3px;
-        background-color: #f58220;
-        border: none;
-        &:hover{
-            background-color: #56819f;
-        }
-            img{
-                width: 15px;
-                height: 15px;
-                filter: invert(100%);
-            }
-}
-.nav-two{
-    .bell{
-        position: relative;
-        .orange-point{
-            position: absolute;
-            top: 11px;
-            left: 24px;
-        }
-    }
-}
-
-    
-.hidden-menu{
-    @include respond-to('small'){
-        display: none;
-    }
-}
-    
-    
-    
-   
-
-    
-      
-    
-    
-    

@@ -1,86 +1,99 @@
 //Global style
+@mixin container-box {
+  margin: 78px 10px 15px 240px;
+  height: 100%;
+  box-shadow: 2px 2px 10px #444;
+}
+
 @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@mixin icon{
-    height: 18px;
-    width: 18px;
-    margin: 15px;
+
+@mixin icon {
+  height: 18px;
+  width: 18px;
+  margin: 15px;
 }
-@mixin box-shadow{
-    box-shadow: 2px 2px 10px #444;
+
+@mixin box-shadow {
+  box-shadow: 2px 2px 10px #444;
 }
-@mixin container-box{
-    margin: 79px 10px 10px 240px; 
-    height: 100%;
-    box-shadow: 2px 2px 10px #444;
+
+@mixin hover-row {
+  background: #f1f3f3;
+  cursor: pointer;
 }
 
 //Paragraph style
-@mixin paragraph-style{
-    color: $paragraph-color;
-    font-family: $paragraph-font;
-    font-size: $paragraph-font-size;
+@mixin paragraph-style {
+  color: $paragraph-color;
+  font-family: $paragraph-font;
+  font-size: $paragraph-font-size;
 }
-@mixin link-name-style{
-    color: #56819F;
-    font-family: $paragraph-font;
-    font-size: 20px;
+
+@mixin link-name-style {
+  color: #56819f;
+  font-family: $paragraph-font;
+  font-size: 20px;
 }
-@mixin paragraph-table-number{
-    color: #333333;
-    font-family: $paragraph-font;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 42px;
+
+@mixin paragraph-table-number {
+  color: #333333;
+  font-family: $paragraph-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 42px;
 }
 
 //Header style
-@mixin hover-header{
-    &:hover{
-        background: #f5f5f2;
-        cursor: pointer;
-        transition: all .2s ease-in-out;
-    }
+@mixin hover-header {
+  &:hover {
+    background: #f5f5f2;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 //Sidebar style
-@mixin sidebar-border-top-line{
-border-top: 1px solid $sidebar-color-border;
+@mixin sidebar-border-top-line {
+  border-top: 1px solid $sidebar-color-border;
 }
 
-@mixin sidebar-border-bottom-line{
-border-bottom: 1px solid $sidebar-color-border;
-}
-@mixin hover-sidebar{
-    &:hover{
-        background: #282828;
-        cursor: pointer;
-        border-left: 4px solid $left-border-hover-color;
-        transition: all .2s ease-in-out;
-        p{
-            color: $hover-paragraph-color;
-        }
-        img{
-            filter:  invert(100%);
-        }
-    }
+@mixin sidebar-border-bottom-line {
+  border-bottom: 1px solid $sidebar-color-border;
 }
 
-//Main section style
-@mixin border-bottom-main{
-    border-bottom: 1px solid $main-color-border;
-}
-@mixin border-left-main{
-    border-left: 1px solid $main-color-border;
-}
-
-@mixin hover-row{
-    background: #f1f3f3;
+@mixin hover-sidebar {
+  &:hover,
+  &.active {
+    background: #282828;
     cursor: pointer;
+    border-left: 4px solid $left-border-hover-color;
+    transition: all 0.2s ease-in-out;
+    p {
+      color: $hover-paragraph-color;
+    }
+    img {
+      filter: invert(100%);
+    }
+  }
 }
 
+//border style
+@mixin border-main {
+  border: 1px solid $main-color-border;
+}
 
+@mixin border-bottom-main {
+  border-bottom: 1px solid $main-color-border;
+}
 
+@mixin border-top-main {
+  border-top: 1px solid $main-color-border;
+}
+
+@mixin border-left-main {
+  border-left: 1px solid $main-color-border;
+}

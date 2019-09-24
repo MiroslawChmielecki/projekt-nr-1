@@ -1,0 +1,36 @@
+.button-section {
+  margin: 40px 0;
+  width: 127px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #f58220;
+  border: none;
+  &:hover {
+    background-color: #56819f;
+    cursor: pointer;
+  }
+  span {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.button-form {
+  margin: 5px;
+  width: 41px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #f58220;
+  border: none;
+  &:hover {
+    background-color: #56819f;
+    cursor: pointer;
+  }
+  img {
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+  }
+}

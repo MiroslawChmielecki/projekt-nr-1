@@ -1,2 +1,1 @@
-# projekt-indywidualny-nr 1
-https://miroslawchmielecki.github.io/projekt-nr-1/
+# projekt-indywidualny-modu-9-12-
