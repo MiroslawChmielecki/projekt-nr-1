@@ -1,2 +1,2 @@
 Link to site:
-https://miroslawchmielecki.github.io/projekt-nr-1/
+https://miroslawchmielecki.github.io/First-project---Dashboard-administration-panel/
