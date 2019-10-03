@@ -3,6 +3,7 @@ header {
   top: 0;
   right: 0;
   background-color: #fff;
+
   @include respond-to("small") {
     display: none;
   }

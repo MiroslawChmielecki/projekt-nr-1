@@ -1,5 +1,6 @@
 .general-statistics {
   @include container-box;
+
   @include respond-to("small") {
     margin: 10px;
   }
@@ -11,6 +12,7 @@
 
     form {
       @include flex-center;
+
       @include respond-to("extra-small") {
         display: flex;
         flex-direction: column;
@@ -24,6 +26,7 @@
         padding: 5px;
         margin: 5px;
         height: 40px;
+
         @include respond-to("extra-small") {
           padding: 0;
         }
@@ -33,9 +36,11 @@
           border: none;
           font-size: 14px;
           background-color: #ffffff;
+
           @include respond-to("extra-small") {
             width: 130px;
           }
+
           &:hover {
             cursor: pointer;
           }
@@ -48,6 +53,7 @@
         .input-date-end {
           @include border-left-main;
           padding-left: 15px;
+
           @include respond-to("extra-small") {
             padding-left: 5px;
           }
@@ -57,6 +63,7 @@
           width: 14px;
           height: 14px;
           margin-right: 10px;
+
           @include respond-to("extra-small") {
             display: none;
           }
@@ -67,6 +74,7 @@
 
   .statistics-table {
     min-height: 150px;
+
     @include flex-center;
     margin: 25px auto;
 
@@ -80,6 +88,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         &:hover {
           @include hover-row;
         }
